@@ -2,3 +2,140 @@
 
 /* カード内の画像は以下のURLを使用して下さい */
 /* https://picsum.photos/id/1005/200/300 */
+
+.green{
+  width: 200px;
+  height: 200px;
+  background-color: #76ff826b;
+  margin: 0 auto;
+}
+
+.blue{
+  width: 200px;
+  height: 200px;
+  background-color: #331aefd0;
+  margin: 0 auto;
+  transition: .5s; /* 変化を滑らかにする。設定しないと一瞬で変化してしまう */
+}
+
+.fade-in{
+  animation: FADE-IN 4s ease;
+}
+
+@keyframes FADE-IN{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.fade-out{
+  animation: FADE-OUT 4s 4s ease;
+}
+
+@keyframes FADE-OUT{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.rotate{
+  animation: ROTATE 4s linear infinite;
+}
+
+@keyframes ROTATE{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.hover-pink:hover{
+  background-color: #ff27e2c9;
+}
+
+.hover-rotate:hover{
+  transform: rotate(360deg);
+}
+
+.hover-up:hover{
+  transform: translateY(-20%);
+}
+
+.hover-right:hover{
+  transform: translateX(20%);
+}
+
+.hover-prolongation-height:hover{
+  height: 300px;
+}
+
+.hover-prolongation-width:hover{
+  width: 500px;
+}
+
+.hover-border:hover{
+  border: 10px #00ffe5 solid;
+  box-sizing: border-box;
+}
+
+.hover-shadow:hover{
+  box-shadow: 8px 11px 10px 3px #06031ed0;
+  /* 水平位移 垂直位移 模糊距離(blur) 陰影大小(spread) 陰影顏色 內側陰影(inset) */
+}
+
+.loading{
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: solid 10px #ecf1f2;
+  border-radius: 50%;
+  border-top-color: #14ff4bcd;
+  animation: LOADING linear 1.1s infinite;
+}
+
+@keyframes LOADING{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.card-list{
+  display: flex;
+}
+
+.card-item{
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-left: 0;
+  transition: .5s;
+}
+
+.card-item:first-child{
+  border-left: 1px solid #000000;
+}
+
+.image{
+  background: url(https://picsum.photos/id/1005/200/300) no-repeat center/cover;
+  height: 150px; /* 高さを設定しないとbackgroundは表示されない */
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card-item:hover{
+  box-shadow: 0px 0px 10px 3px #424242d0;
+  z-index: 1; /* 優先度。数字の大きい方が前面に出る。設定しない場合z-index=0 */
+}

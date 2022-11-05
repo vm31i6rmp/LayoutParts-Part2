@@ -1,2 +1,25 @@
 @charset "UTF-8";
 
+.content{
+  height: 500px;
+  /* 背景画像は表示するにはコンテンツの高さが必要 */
+}
+
+
+.background-image{
+  background: url(../../image/coffee-background.jpg);
+}
+
+
+.background-image-norepeat{
+  background: url(../../image/coffee-background.jpg) no-repeat;
+}
+
+.background-image-cover{
+  background: url(../../image/coffee-background.jpg) no-repeat center/cover;
+  /* background-positionを指定すると後ろに「/」で区切り、そしてbackground-sizeを指定 */
+}
+
+.background-image-contain{
+  background: url(../../image/coffee-background.jpg) no-repeat center/contain;
+}
